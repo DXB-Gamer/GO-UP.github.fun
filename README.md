@@ -8,8 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ui:'Orbitron',monospace;--mono:'Share Tech Mono',monospace}
-html,body{width:100%;height:100%;background:#07050f;overflow:hidden;font-family:var(--ui);color:#fff;touch-action:none;user-select:none;-webkit-user-select:none}
-#app{display:flex;flex-direction:column;align-items:center;width:100%;height:100%}
+html,body{width:100%;height:100%;margin:0;padding:0;background:#07050f;overflow:hidden;font-family:var(--ui);color:#fff;touch-action:none;user-select:none;-webkit-user-select:none}
+#app{display:flex;flex-direction:column;align-items:stretch;width:100%;height:100%;position:fixed;inset:0}
+#gw{display:flex;flex-direction:column;width:100%;height:100%;}
 
 .screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:100;overflow:hidden}
 .screen.hidden{display:none}
@@ -46,16 +47,16 @@ html,body{width:100%;height:100%;background:#07050f;overflow:hidden;font-family:
 /* restart */
 #btnRestart{--btn-c1:#7b2fff;--btn-c2:#00e5ff;--btn-glow:#7b2fff88}
 
-#gw{display:flex;flex-direction:column;align-items:center;width:100%;height:100%}
-#hud{width:100%;max-width:520px;display:flex;justify-content:space-between;align-items:center;
+#gw{display:flex;flex-direction:column;width:100%;height:100%}
+#hud{width:100%;display:flex;justify-content:space-between;align-items:center;
   padding:6px 14px;background:rgba(0,0,0,.65);border-bottom:1px solid #ffffff10;flex-shrink:0;z-index:10}
 .hi{font-family:var(--mono);font-size:clamp(.62rem,2vw,.86rem);color:#888;display:flex;flex-direction:column;align-items:center;gap:1px}
 .hi .lb{font-size:.6em;color:#333;letter-spacing:.1em;text-transform:uppercase}
 .hi .vl{color:#fff;font-weight:bold}
-#cc{flex:1;width:100%;max-width:520px;position:relative;overflow:hidden;background:#07050f}
+#cc{flex:1;width:100%;position:relative;overflow:hidden;background:#07050f}
 #gc{display:block;width:100%;height:100%}
 
-#tc{display:none;width:100%;max-width:520px;padding:10px 18px 14px;background:rgba(0,0,0,.82);border-top:1px solid #ffffff0c;flex-shrink:0}
+#tc{display:none;width:100%;padding:10px 18px 14px;background:rgba(0,0,0,.82);border-top:1px solid #ffffff0c;flex-shrink:0}
 .tr{display:flex;justify-content:space-between;align-items:center}
 .ts{display:flex;gap:10px}
 .vb{width:clamp(62px,14vw,80px);height:clamp(54px,12vw,68px);border-radius:10px;border:2px solid #ffffff12;
